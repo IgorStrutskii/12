@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dz12</title>
+    <script>
+      function removeElement(array, item) {
+        return array.filter(function (value) {
+          return value !== item;
+        });
+      }
+
+      function performOperations() {
+        const array = [1, 2, 3, 4, 5, 6, 7];
+        const newArray = removeElement(array, 5);
+        console.log(newArray);
+        // Результат: [1, 2, 3, 4, 6, 7]
+
+        // Отримання посилання на елемент span
+        const resultSpan = document.getElementById("sumPositive");
+        // Встановлення текстового вмісту елемента span
+        resultSpan.textContent = newArray.toString();
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Операції з масивом</h1>
+    <button onclick="performOperations()">Виконати операції</button>
+    <p>Результат: <span id="sumPositive"></span></p>
+  </body>
+</html>
